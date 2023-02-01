@@ -5,7 +5,7 @@ vim.cmd([[nnoremap <leader>x :x!<cr>]])
 
 --Paste to system clipboard (currently not working)
 vim.cmd([[nnoremap <leader>y :"+y<cr>]])
-vim.cmd([[vnoremap <C-y> :"+y<cr>]])
+vim.cmd([[vnoremap <C-y> :y+"<cr>]])
 
 --Delete buffer
 vim.cmd([[nnoremap <C-w> :bdelete!<cr>]])
