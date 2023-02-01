@@ -1,0 +1,24 @@
+swaylock --screenshot \
+--show-failed-attempts \
+--grace 0 \
+--hide-keyboard-layout \
+--indicator \
+--clock \
+--indicator-radius 99\
+--font-size 60 \
+--indicator-thickness 4 \
+--inside-color cdd6f400 \
+--inside-clear-color a6e3a1 \
+--inside-caps-lock-color fab387 \
+--inside-ver-color 00000000 \
+--inside-wrong-color f38ba8 \
+--key-hl-color 74c7ec \ 
+--submit-on-touch \
+--ring-color 00000000 \
+--line-color 00000000 \
+--separator-color 00000000 \
+--ring-ver-color 00000000 \
+--line-ver-color 00000000 \
+--text-color cdd6f4 \
+--effect-blur 35x5 \
+--time-effects

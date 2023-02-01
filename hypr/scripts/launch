@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+
+
+# Kill already running process
+_ps=(waybar mako mpd polkit-kde-authentication-agent-1 eww)
+for _prs in "${_ps[@]}"; do
+	if [[ `pidof ${_prs}` ]]; then
+		killall -9 ${_prs}
+	fi
+done
+
+# Polkit agent
+/usr/lib/polkit-gnome-authentication-agent-1 &
+
+# Lauch statusbar (waybar)
+waybar # Old config
+#waybar --config ~/.config/waybar/secondconfig/config #new config
+
+# Set wallpaper
+wpaperd &
+
+# Lauch notification daemon (mako)
+dunst &
+
+# XDG-PORTAL
+#dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+#systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+
+# nm-applet
+#nm-applet --indicator &
+
+# Xwayland
+#xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2 &
+
+# clipman
+wl-paste -t text --watch clipman store &
+wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json" &
+clipman restore &
+
+# Swaylock
+#swayidle -w timeout 900 swaylock before-sleep swaylock &
+
+# Set Cursor Size
+#hyprctl setcursor Posy_Cursor_Mono_Black 24 &
+
+# Mouse Leds
+openrgb -p blue &
+
+
+
+
