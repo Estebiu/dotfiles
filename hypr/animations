@@ -1,13 +1,13 @@
 bezier=normal, 0.1, 0.5, 0.4, 1 					#My bezier curve as of 25/02/2023.
 
-animation=windowsIn,1,6,normal,slide
-animation=windowsOut,1,6,normal,slide
+animation=windowsIn,1,3,normal,slide
+animation=windowsOut,1,3,normal,slide
 animation=workspaces,1,2,normal,slidevert			#Workspaces change vertically.
-animation=windowsMove,1,6,normal,slide				
+animation=windowsMove,1,3,normal,slide				
 
 animation=fadeOut,1,4,normal
 animation=fadeIn,1,4, normal
-animation=fadeShadow, 1, 19, normal
+animation=fadeShadow, 1, 1, normal
 
 #animation=border, 1, 18, normal					#On a laptop this two options make you consume
 #animation=borderangle, 1, 100, normal, loop		# 2 watts more. Not worth it.
