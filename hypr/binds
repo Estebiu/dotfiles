@@ -1,0 +1,134 @@
+#Screenshots 
+bind=,Print,exec,$screenshot --now
+#bind=SUPERCTRL,Print,exec,$screenshot --in5
+bind=SHIFT,Print,exec,$screenshot --in10
+bind=CTRL,Print,exec,$screenshot --win
+bind=SUPER,Print,exec,$screenshot --area
+
+#MediaPlayer
+bind=ALT,38,exec,playerctl play-pause
+bind=ALT,39,exec,playerctl previous
+bind=ALT,40,exec,playerctl next
+bind=SUPERALT,39,exec,playerct position 15-
+bind=SUPERALT,40,exec,playerctl position 15+
+bind=SUPER,O,exec,pavucontrol 
+
+#TabSwitch
+bind = SUPER, TAB, exec , hyprctl clients -j  | jq '.[] |  "\(.address) \(.class): \(.title)"' -r  |  wofi -d -i -W 699 -p "Switch to" | awk '{print "address:"$1}' | xargs hyprctl dispatch focuswindow
+
+
+#Clipboard
+bind=SUPER,V,exec,cliphist list | wofi -W 900 -p "Clipboard" -d -i | cliphist decode | wl-copy
+bind=SUPER,B,exec,rofi -show emoji | wl-paste -t text/plain
+bind=SUPER,C,exec,rofi -show calc 
+
+#misc binds
+bind=SUPER,RETURN,exec,foot
+bind=SUPER,Q,killactive,
+bind=SUPERSHIFT,M,exit,
+bind=SUPER,A,togglefloating,
+bind=SUPER,P,workspaceopt,allpseudo
+bind=SUPERSHIFT,P,workspaceopt,allfloat
+bindr=SUPER,Super_L,exec, $launcher || pkill $launcher 
+bind=SUPER,K,togglesplit
+
+
+#Notifs Pause/Restart
+bind=SUPER,J,exec,dunstctl set-paused true
+bind=SUPERSHIFT,J,exec,dunstctl set-paused false
+
+#lock
+bind=SUPER,L,exec,swaylock
+bindl=,keyboard:power-button-1,exec,swaylock
+
+#Mouse
+bindm=SUPER,mouse:272,movewindow
+bindm=SUPER,mouse:273,resizewindow
+bind=SUPER,mouse:276,fullscreen
+bind=SUPER,mouse:275,killactive
+bind=SUPER,mouse:274,togglefloating
+
+#Function Keys
+bind=,121,exec,pactl set-sink-mute @DEFAULT_SINK@ toggle
+bind=,122,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%
+bind=,123,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%
+bind=,199,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bind=,232,exec,brightnessctl s 1%-
+bind=,233,exec,brightnessctl s +1%
+bind=SUPER,t,exec,pactl set-sink-mute @DEFAULT_SINK@ toggle
+bind=SUPER,d,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%
+bind=SUPER,h,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%
+binde=SUPER,n,exec,brightnessctl s 1-
+binde=SUPER,e,exec,brightnessctl s +1
+
+##waybar
+bind=SUPERSHIFT,U, exec, killall waybar
+bind=SUPER,U, exec, waybar 
+
+#Toggle laptop monitor on and off
+bind=,199,exec,wlopm --toggle eDP-1
+
+#Standard workspace switching
+bind=SUPER,1,workspace,1
+bind=SUPER,2,workspace,2
+bind=SUPER,3,workspace,3
+bind=SUPER,4,workspace,4
+bind=SUPER,5,workspace,5
+bind=SUPER,6,workspace,6
+bind=SUPER,7,workspace,7
+bind=SUPER,8,workspace,8
+bind=SUPER,9,workspace,9
+bind=SUPER,0,workspace,10
+bind=SUPER,F,fullscreen,1
+bind=SUPERSHIFT,F,fullscreen,0
+
+bind=ALT,1,movetoworkspace,1
+bind=ALT,2,movetoworkspace,2
+bind=ALT,3,movetoworkspace,3
+bind=ALT,4,movetoworkspace,4
+bind=ALT,5,movetoworkspace,5
+bind=ALT,6,movetoworkspace,6
+bind=ALT,7,movetoworkspace,7
+bind=ALT,8,movetoworkspace,8
+bind=ALT,9,movetoworkspace,9
+bind=ALT,0,movetoworkspace,10
+
+bind=ALTSHIFT,1,movetoworkspacesilent,1
+bind=ALTSHIFT,2,movetoworkspacesilent,2
+bind=ALTSHIFT,3,movetoworkspacesilent,3
+bind=ALTSHIFT,4,movetoworkspacesilent,4
+bind=ALTSHIFT,5,movetoworkspacesilent,5
+bind=ALTSHIFT,6,movetoworkspacesilent,6
+bind=ALTSHIFT,7,movetoworkspacesilent,7
+bind=ALTSHIFT,8,movetoworkspacesilent,8
+bind=ALTSHIFT,9,movetoworkspacesilent,9
+bind=ALTSHIFT,0,movetoworkspacesilent,10
+
+bind=SUPER,mouse_down,workspace,e+1
+bind=SUPER,mouse_up,workspace,e-1
+
+bind=SUPER,X,exec,hyprctl dispatch togglegroup none
+bind=ALT,Tab,exec,hyprctl dispatch changegroupactive f
+bind=SUPERALT,Tab,exec,hyprctl dispatch changegroupactive b
+
+#Fake fullscreen
+bind=SHIFT,96,fakefullscreen,
+
+# Focus
+bind=SUPER,left,movefocus,l
+bind=SUPER,right,movefocus,r
+bind=SUPER,up,movefocus,u
+bind=SUPER,down,movefocus,d
+
+# Move
+bind=SUPERSHIFT,left,movewindow,l
+bind=SUPERSHIFT,right,movewindow,r
+bind=SUPERSHIFT,up,movewindow,u
+bind=SUPERSHIFT,down,movewindow,d
+
+# Resize
+binde=SUPERCTRL,left,resizeactive,-5 0
+binde=SUPERCTRL,right,resizeactive,5 0
+binde=SUPERCTRL,up,resizeactive,0 -5
+binde=SUPERCTRL,down,resizeactive,0 5
+

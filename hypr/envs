@@ -1,0 +1,3 @@
+$screenshot = bash ~/.config/hypr/scripts/screenshots
+$launcher = fuzzel
+

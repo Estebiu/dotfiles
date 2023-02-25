@@ -1,0 +1,13 @@
+#Monitor settings
+#monitor=,preferred,auto,1
+monitor=eDP-1,3840x2160@60,0x0,2,bitdepth,10
+monitor=DP-1,1920x1080@144,0x0,1
+monitor=HDMI-A-1,3840x2160@60,auto,2
+#monitor=,highrr,auto,1
+monitor=DP-2,1920x1080@144,0x0,1
+
+#workspace
+wsbind=1,eDP-1
+wsbind=2,eDP-1
+wsbind=3,eDP-1
+wsbind=4,eDP-1

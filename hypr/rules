@@ -1,0 +1,18 @@
+windowrule=float,class:^(blueberry.py)
+windowrule=forceinput,class:^(Waydroid)$
+windowrule=forceinput,title:^(Liftoff)$
+windowrule=workspace 9, lollypop
+windowrule=workspace 5, thunderbird
+windowrulev2=workspace 5,class:^(org.telegram.desktop)$
+windowrulev2=workspace 5,class:^(Electron)$,title:^(.*Discord)
+windowrule=float,pavucontrol
+windowrule=workspace 2, firefox
+#windowrulev2 = fullscreen,class:^(mpv)$
+
+#Spamton
+windowrule=float, com-group_finity-mascot-Main
+windowrule=noblur, com-group_finity-mascot-Main
+windowrule=nofocus, com-group_finity-mascot-Main
+windowrule=noshadow, com-group_finity-mascot-Main
+windowrule=noborder, com-group_finity-mascot-Main
+
