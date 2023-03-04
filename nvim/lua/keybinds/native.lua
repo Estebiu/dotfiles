@@ -19,5 +19,5 @@ vim.cmd([[nmap <C-t> <esc>:tabe<CR>]])
 
 --Cool effects
 vim.cmd([[nmap <C-k> <esc>:CellularAutomaton make_it_rain<CR>]])
-vim.cmd([[nmap <C-b> <esc>:CellularAutomaton game_of_life<CR>]])
+--vim.cmd([[nmap <C-b> <esc>:CellularAutomaton game_of_life<CR>]])
 

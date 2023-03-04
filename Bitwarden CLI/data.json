@@ -1,0 +1,38 @@
+{
+  "tempAccountSettings": {
+    "environmentUrls": {
+      "base": null,
+      "api": null,
+      "identity": null,
+      "icons": null,
+      "notifications": null,
+      "events": null,
+      "webVault": null,
+      "keyConnector": null
+    },
+    "pinProtected": {
+      "encrypted": null,
+      "decrypted": null
+    },
+    "protectedPin": null,
+    "settings": null,
+    "vaultTimeoutAction": "lock"
+  },
+  "global": {
+    "theme": "system",
+    "window": {},
+    "stateVersion": 6,
+    "environmentUrls": {
+      "base": null,
+      "api": null,
+      "identity": null,
+      "icons": null,
+      "notifications": null,
+      "events": null,
+      "webVault": null,
+      "keyConnector": null
+    },
+    "installedVersion": "2022.10.0"
+  },
+  "authenticatedAccounts": []
+}
