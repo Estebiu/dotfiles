@@ -14,8 +14,8 @@ bind=SUPERALT,40,exec,playerctl position 15+
 bind=SUPER,O,exec,pavucontrol 
 
 #TabSwitch
-bind = SUPER, TAB, exec , hyprctl clients -j  | jq '.[] |  "\(.address) \(.class): \(.title)"' -r  |  wofi -d -i -W 699 -p "Switch to" | awk '{print "address:"$1}' | xargs hyprctl dispatch focuswindow
-
+#bind = SUPER, TAB, exec , hyprctl clients -j  | jq '.[] |  "\(.address) \(.class): \(.title)"' -r  |  wofi -d -i -W 699 -p "Switch to" | awk '{print "address:"$1}' | xargs hyprctl dispatch focuswindow
+bind = SUPER, TAB, exec, anyrun -o libanyrun_hyprland.so
 
 #Clipboard
 bind=SUPER,V,exec,cliphist list | wofi -W 900 -p "Clipboard" -d -i | cliphist decode | wl-copy
@@ -53,8 +53,10 @@ bind=,121,exec,pactl set-sink-mute @DEFAULT_SINK@ toggle
 bind=,122,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%
 bind=,123,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%
 bind=,199,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bind=,232,exec,brightnessctl s 1%-
-bind=,233,exec,brightnessctl s +1%
+bind=,232,exec,brillo -q -U 5 -u 150000
+bind=,233,exec,brillo -q -A 5 -u 150000
+bind=SHIFT,232,exec,ddcutil setvcp 10 - 15
+bind=SHIFT,233,exec,ddcutil setvcp 10 + 15
 bind=SUPER,t,exec,pactl set-sink-mute @DEFAULT_SINK@ toggle
 bind=SUPER,d,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%
 bind=SUPER,h,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -109,10 +111,10 @@ bind=SUPER,mouse_up,workspace,e-1
 
 bind=SUPER,X,exec,hyprctl dispatch togglegroup none
 bind=ALT,Tab,exec,hyprctl dispatch changegroupactive f
-bind=SUPERALT,Tab,exec,hyprctl dispatch changegroupactive b
+bind=SHIFTALT,Tab,exec,hyprctl dispatch changegroupactive b
 
 #Fake fullscreen
-bind=SHIFT,96,fakefullscreen,
+bind=SHIFT,95,fakefullscreen,
 
 # Focus
 bind=SUPER,left,movefocus,l

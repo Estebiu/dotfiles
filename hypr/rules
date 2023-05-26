@@ -1,6 +1,6 @@
 windowrule=float,class:^(blueberry.py)
 windowrule=forceinput,class:^(Waydroid)$
-windowrule=forceinput,title:^(Liftoff)$
+#windowrule=forceinput,class:^(liftoff.exe)$
 windowrule=workspace 9, lollypop
 windowrule=workspace 5, thunderbird
 windowrulev2=workspace 5,class:^(org.telegram.desktop)$

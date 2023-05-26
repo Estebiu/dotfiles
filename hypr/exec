@@ -1,3 +1,4 @@
+#exec-once=pcmanfm -d
 exec=dunst 																	#Notifications
 exec-once=bash ~/.azotebg 													#Restart azote with the latest wallpaper
 exec-once=wl-paste --watch cliphist store 									#Clipboard
@@ -5,6 +6,9 @@ exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 		#Polkit. T
 exec-once=syncthing --no-browser 											#Start syncthing in headless mode; super cool utility to keep your files synced between devices.
 exec-once=openrgb -p blue 													#I use openrgb for my mouse's leds. 
 exec-once=waybar 															#Just.. waybar
-exec-once=pactl load-module module-combine-sink 							#Set up an all-in-one sink for audio, to play simultaneously on multiple audio devices
+#exec-once=pactl load-module module-combine-sink 							#Set up an all-in-one sink for audio, to play simultaneously on multiple audio devices
+exec-once=iio-hyprland
+
 #exec-once=swayidle															#Sometimes I like to have swayidle on.
 #exec-once=eww open bar														#Sometimes I like to use eww in place of waybar.
+
