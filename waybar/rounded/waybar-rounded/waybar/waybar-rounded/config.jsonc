@@ -1,0 +1,167 @@
+{
+   	"layer": "top",
+   	"position": "left", 
+   	"width": 24,
+	"height": 1068,
+   	"spacing": 0,
+   	"margin-top": 0,
+   	"margin-bottom": 8,
+   	"padding-bottom": 16,
+   	"output": ["eDP-1"],
+   	"margin-bottom": 0,
+   	"margin-left": 0,
+   	"margin-right": 0,
+   	"modules-left": ["wlr/workspaces", "wlr/taskbar", "tray"],
+   	"modules-center": [],
+   	"modules-right": ["network", "pulseaudio","backlight", "battery", "cpu", "temperature", "memory", "custom/date", "clock"],
+	"custom/cava" : {
+		"exec" : "/home/estebiu/.config/hypr/scripts/cava" 
+	},
+
+	"hyprland/window": {
+		"separate-outputs": true,
+		"rotate": 90
+	},
+
+
+	"backlight": {
+		"rotate": 90,
+	    "device": "intel_backlight",
+	    "format": "{percent}% {icon}",
+	    "format-icons": ["", ""]
+   	},
+   	"wlr/workspaces": {
+		"disable-scroll": false,
+		"all-outputs": true,
+   		"on-click": "activate",
+	    "on-middle-click": "close",
+		"format": "{icon}",
+    	"persistent_workspaces": {
+      		"1": [],
+      		"2": [],
+      		"3": [],
+      		"4": [],
+      		"5": [],
+      		"6": [],
+      		"7": [],
+      		"8": [],
+      		"9": [],
+      		"10": []
+	},
+   	"format-icons": {
+   	  "1": "",
+   	  "2": "",
+   	  "3": "3",
+      "4": "",
+      "5": "",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "default": "一",
+      "active": "●"
+      }
+     },
+  	"tray": {
+    	"icon-size": 16,
+    	"spacing": 10,
+  	},
+  	"battery": {
+		"full-at": 50,
+		"states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}% {power} W",
+        "format-charging": " {capacity}% {power} W",
+        "format-alt": "{icon} {time}",
+     	"interval": 1,
+		// "format-good": "", // An empty format will hide the module
+        "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+		"rotate": 90
+    },
+        "memory": {
+			"rotate": 90,
+         	"interval": 10,
+         	"format": " {used:0.1f}G",
+    },
+
+
+
+    "wlr/taskbar": {
+    	    "rotate": 90,
+			"format": "{icon}",
+        	"icon-size": 18,
+		"active-first": true,
+        	"icon-theme": "Star",
+        	"tooltip-format": "{title}",
+        	"on-click": "activate",
+		"ignore-list": [],
+        	"on-click-middle": "close",
+        	"on-click-right": "activate"
+    },
+    "temperature": {
+        "rotate": 90,
+		// "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 75,
+        // "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+         "rotate": 90,
+		 "interval": 5,
+         "format": " {usage}%"
+    },
+
+  
+    "custom/media": {
+        "format": "{icon} {}",
+        "max-length": 70,
+        "format-icons": {
+            "spotify": " ",
+            "default": " "
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/scroll_spotify_status.sh"
+    },
+	"custom/date": {
+    "rotate": 90,
+	"format": "  {}",
+    	"interval": 3600,
+    	"exec": "$HOME/.config/waybar/waybar-date.sh"
+	},
+   "clock": {
+		"rotate": 90,
+	    "format": "  {:%H:%M} ",
+        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+	"network": {
+        "rotate": 90,
+		"format-wifi": "  {essid}",
+        	"format-ethernet": "Ethernet",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "󰤮 Disconnected",
+		"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
+	},
+    "pulseaudio": {
+		"rotate": 90,
+		"format": "{icon}  {volume}%",
+        	"format-muted": "ﱝ Muted",
+				"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+                "scroll-step": 5,
+        	"format-icons": {
+            	"headphone": "",
+            	"hands-free": "",
+            	"headset": "",
+            	"phone": "",
+            	"portable": "",
+            	"car": "",
+            	"default": ["奄","奔", "奔", "墳"]
+        }
+    }
+}

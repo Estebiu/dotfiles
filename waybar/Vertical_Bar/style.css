@@ -1,0 +1,168 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: mononoki Nerd Font;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #181825;
+	margin-bottom: 0px;
+    padding-right: 0px;
+}
+
+tooltip {
+	background: #0f0f0f;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #262626;
+}
+
+#workspaces button {
+    padding: 0px 0px;
+    color: #cba6f7;
+}
+
+#workspaces button.focused {
+    color: #0f0f0f;
+    background-color: #c49ec4;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    color: #0f0f0f;
+    background-color: #9ec3c4;
+    border-radius: 15px;
+}
+
+#workspaces button:hover {
+	background-color: #c49ec4;
+	color: #0f0f0f;
+	border-radius: 15px;
+}
+
+#workspaces, #backlight, #taskbar, #tray, #custom-date, #custom-notification, #custom-media, #custom-updates, #custom-downloads , #clock, #battery, #pulseaudio, #network, #temperature, #workspaces, #tray, #cpu, #taskbar, #memory, #hyprland-window  {
+	background-color: #181825;
+	padding: 6px 0px;
+	margin: 0px 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;	
+	font-size: 13px
+}
+
+window#waybar {
+	background: #181825;
+}
+
+#memory {
+    color: #89dceb;
+}
+
+#hyprland-window{
+	color: #f38ba8;
+	background-color: #181825
+}
+#tray {
+    color: #CDD6F4;
+    border-radius: 0px 0px 0px 0px;
+	margin-top: 0px
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+    background-color: rgba(30, 30, 46, 0.6);
+    color: #CDD6F4;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(30, 30, 46, 0.6);
+    color: #CDD6F4;
+}
+#taskbar{
+    color: #CDD6F4;
+    border-radius: 0px 0px 0px 0px;
+}
+#taskbar button:hover {
+	background-color: #c49ec4;
+	color: #0f0f0f;
+	border-radius: 0px;
+}
+#cpu {
+	color: #a6e3a1;
+}
+#temperature {
+	color: #94e2d5
+} 
+#temperature.critical {
+    color: #fff;
+    background: rgb(210,15,57); 
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#backlight {
+	color: #fab387
+}
+#battery {
+    color: #f9e2af;
+}
+
+#battery.charging {
+    color: #f9e2af;
+    background: #94e2d5; 
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #181825;
+        color: rgba(166, 227, 161, 0.18);
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: rgba(210, 15, 57, 0.8);
+    color: #fff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 16;
+    animation-direction: alternate;
+}
+#custom-media {
+	color: #89b4fa;
+	border-radius: 0px 0px 0px 0px;
+}
+
+#workspaces {
+	border-radius: 0px 0px 0px 0px;
+	margin-bottom: 0px;
+	font-size: 44px
+}
+
+#custom-date {
+  color: #74c7ec;
+}
+#clock {
+  color: #89b4fa;
+  border-radius: 0px 0px 0px 0px;
+  margin-right: 0px;
+}
+
+#network {
+	color: #cba6f7;
+	border-radius: 0px 0px 0px 0px;
+}
+
+#pulseaudio {
+	color: #eba0ac;
+}
