@@ -53,3 +53,11 @@ vim.cmd([[nnoremap <leader>fg <cmd>Telescope live_grep<cr>]])
 vim.cmd([[nnoremap <leader>fb <cmd>Telescope buffers<cr>]])
 vim.cmd([[nnoremap <leader>fh <cmd>Telescope help_tags<cr>]])
 
+--Terminal
+vim.cmd([[nnoremap <leader>ft <cmd>FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish<cr>]])
+vim.cmd([[nnoremap t <cmd>FloatermToggle myfloat<cr>]])
+vim.cmd([[tnoremap <esc> <cmd>FloatermToggle myfloat<cr>]])
+--map('n', "<leader>ft", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ")
+--map('n', "t", ":FloatermToggle myfloat<CR>")
+--map('t', "<Esc>", "<C-\\><C-n>:q<CR>")
+
