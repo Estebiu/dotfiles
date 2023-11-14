@@ -1,3 +1,4 @@
 $screenshot = bash ~/.config/hypr/scripts/screenshots
-$launcher = pkill anyrun || anyrun
+#$launcher = pkill anyrun || anyrun
+$launcher= fuzzel
 

@@ -1,13 +1,18 @@
 windowrule=float,class:^(blueberry.py)
 windowrule=forceinput,class:^(Waydroid)$
 #windowrule=forceinput,class:^(liftoff.exe)$
+windowrule=float,pavucontrol
+#windowrulev2 = fullscreen,class:^(mpv)$
+windowrule=float,class:^(pcmanfm-qt)$,title:^(Copy Files)
+
+windowrule=workspace 4, spotube
+windowrule=workspace 4, sublime
+windowrule=workspace 2, firefox
 windowrule=workspace 9, lollypop
 windowrule=workspace 5, thunderbird
 windowrulev2=workspace 5,class:^(org.telegram.desktop)$
 windowrulev2=workspace 5,class:^(Electron)$,title:^(.*Discord)
-windowrule=float,pavucontrol
-windowrule=workspace 2, firefox
-#windowrulev2 = fullscreen,class:^(mpv)$
+
 
 #Spamton
 windowrule=float, com-group_finity-mascot-Main
@@ -16,3 +21,8 @@ windowrule=nofocus, com-group_finity-mascot-Main
 windowrule=noshadow, com-group_finity-mascot-Main
 windowrule=noborder, com-group_finity-mascot-Main
 
+
+#mpv
+windowrule=opaque, mpv
+windowrule=noblur, mpv
+windowrule=fullscreen, mpv

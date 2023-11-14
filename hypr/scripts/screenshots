@@ -39,12 +39,6 @@ shotnow () {
 	notify_view_no_notification
 }
 
-shot5 () {
-	countdown '5'
-	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
-	notify_view
-}
-
 shot10 () {
 	countdown '10'
 	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
@@ -55,12 +49,12 @@ shotwin () {
 	w_pos=`hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1`
 	w_size=`hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g`
 	cd ${dir} && grim -g "$w_pos $w_size" - | tee "$file" | wl-copy
-	notify_view
+	notify_view_no_notification
 }
 
 shotarea () {
 	cd ${dir} && grim -g "$(slurp -b 1B1F28CC -c E06B74ff -s C778DD0D -w 2)" - | tee "$file" | wl-copy
-	notify_view
+	notify_view_no_notification
 }
 
 if [[ ! -d "$dir" ]]; then
